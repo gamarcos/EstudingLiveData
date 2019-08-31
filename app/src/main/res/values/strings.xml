@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">EstudingLiveData</string>
+    <string name="drawer_opened">Gaveta aberta</string>
+    <string name="drawer_closed">Gaveta fechada</string>
+    <string name="connection_unavailable">Ah, não! Estamos sem conexão :(</string>
+    <string name="no_connection_disclaimer">Estamos sem conexão. Mas não se preocupe! Conectaremos automaticamente assim
+        que a Internet voltar
+    </string>
+    <string name="functionality_unavailable">Ah não! Ainda não implementamos essa funcionalidade</string>
+    <string name="ok">OK</string>
+</resources>
