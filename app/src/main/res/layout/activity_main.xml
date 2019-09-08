@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".base.view.MainActivity">
+    tools:context=".base.view.base.MainActivity">
 
     <fragment
         android:id="@+id/nav_host_fragment"

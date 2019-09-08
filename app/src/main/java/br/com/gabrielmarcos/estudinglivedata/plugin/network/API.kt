@@ -1,7 +1,5 @@
 package br.com.gabrielmarcos.estudinglivedata.plugin.network
 
-import retrofit2.Call
-import br.com.gabrielmarcos.estudinglivedata.BuildConfig
 import br.com.gabrielmarcos.estudinglivedata.base.business.exception.HttpException
 import br.com.gabrielmarcos.estudinglivedata.base.business.exception.InternetConnectionException
 import br.com.gabrielmarcos.estudinglivedata.feature.models.Account
@@ -9,6 +7,7 @@ import br.com.gabrielmarcos.estudinglivedata.feature.models.Client
 import com.google.gson.Gson
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Call
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -56,3 +55,4 @@ internal fun <P> executeCall(call: Call<P>): Response<P>? {
         throw InternetConnectionException()
     }
 }
+

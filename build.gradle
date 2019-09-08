@@ -21,6 +21,7 @@ buildscript {
     ext.retrofit = "2.5.0"
     ext.circleimage = "2.2.0"
     ext.dagger2 = "2.24"
+    ext.material = '1.1.0-alpha07'
 
     repositories {
         google()

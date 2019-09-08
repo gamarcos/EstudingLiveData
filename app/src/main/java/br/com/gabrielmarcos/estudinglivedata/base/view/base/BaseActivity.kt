@@ -1,4 +1,4 @@
-package br.com.gabrielmarcos.estudinglivedata.base.view
+package br.com.gabrielmarcos.estudinglivedata.base.view.base
 
 import android.os.Bundle
 import androidx.annotation.LayoutRes

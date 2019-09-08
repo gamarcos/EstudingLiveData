@@ -1,6 +1,6 @@
 package br.com.gabrielmarcos.estudinglivedata.plugin.dagger.module
 
-import br.com.gabrielmarcos.estudinglivedata.base.view.MainActivity
+import br.com.gabrielmarcos.estudinglivedata.base.view.base.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

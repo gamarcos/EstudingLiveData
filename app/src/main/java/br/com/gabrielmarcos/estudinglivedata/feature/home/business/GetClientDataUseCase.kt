@@ -5,8 +5,7 @@ import br.com.gabrielmarcos.estudinglivedata.base.business.interactor.UseCase
 import br.com.gabrielmarcos.estudinglivedata.feature.models.ClientData
 import javax.inject.Inject
 
-class
-GetClientDataUseCase @Inject constructor(private val repository: HomeRepository): UseCase<Nothing?, ClientData>() {
+class GetClientDataUseCase @Inject constructor(private val repository: HomeRepository): UseCase<Nothing?, ClientData>() {
 
     override fun execute(param: Nothing?): Output<ClientData> {
         return Output.success(converterToClient())

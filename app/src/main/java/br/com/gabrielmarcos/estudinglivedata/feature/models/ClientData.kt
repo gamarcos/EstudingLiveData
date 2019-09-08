@@ -1,5 +1,20 @@
 package br.com.gabrielmarcos.estudinglivedata.feature.models
 
-import br.com.gabrielmarcos.estudinglivedata.base.gateway.ViewState
+data class ClientData(val client: Client? = null, val account: Account? = null) {
 
-data class ClientData(val client: Client?, val account: Account?)
+    fun getSavingAmount(): Double? {
+        return account?.savingAccount?.run { amount }
+    }
+
+    fun getCheckingAmount(): Double? {
+        return account?.checkingAccount?.run { amount }
+    }
+
+    fun getClientName() : String? {
+        return client?.name
+    }
+
+    fun getContacts() : List<Contact>? {
+        return client?.contacts
+    }
+}

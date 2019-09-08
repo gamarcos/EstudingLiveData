@@ -1,8 +1,7 @@
-package br.com.gabrielmarcos.estudinglivedata.base.view
+package br.com.gabrielmarcos.estudinglivedata.base.view.base
 
 import android.os.Bundle
 import br.com.gabrielmarcos.estudinglivedata.R
-import dagger.android.AndroidInjector
 
 class MainActivity: BaseActivity() {
 

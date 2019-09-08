@@ -1,56 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:id="@+id/headerContent">
 
-   <ImageView
-       android:id="@+id/imageView"
+   <!-- TODO PODE GERAR OVERDRWAW -->
+
+   <com.facebook.shimmer.ShimmerFrameLayout
+       android:id="@+id/shimmerViewContainer"
        android:layout_width="match_parent"
        android:layout_height="@dimen/home_content_profile"
-       android:background="@android:color/holo_orange_dark"
+       android:elevation="1dp"
+       app:shimmer_duration="800"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toTopOf="parent"
-       app:layout_constraintBottom_toBottomOf="parent"/>
+       app:layout_constraintBottom_toBottomOf="parent">
 
-   <TextView
-       android:id="@+id/headerClientNameText"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="Gabriel Marcos"
-       android:textColor="@android:color/white"
-       android:textSize="26sp"
-       android:textStyle="bold"
-       android:layout_marginStart="16dp"
-       app:layout_constraintBottom_toTopOf="@+id/headerAmountCheckingAccountText"
+      <include layout="@layout/content_placeholder"/>
+
+   </com.facebook.shimmer.ShimmerFrameLayout>
+
+   <ImageView
+       android:id="@+id/headerBackgroundView"
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/home_content_profile"
+       android:background="@android:color/holo_orange_dark"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintVertical_bias="0.0" />
+
+   <de.hdodenhof.circleimageview.CircleImageView
+       android:id="@+id/headerClientImageVView"
+       android:layout_width="100dp"
+       android:layout_height="100dp"
+       android:elevation="1dp"
+       android:layout_marginTop="16dp"
+       android:layout_marginEnd="16dp"
+       app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintTop_toTopOf="parent" />
 
    <TextView
-       android:id="@+id/headerAmountCheckingAccountText"
-       android:layout_width="wrap_content"
+       android:id="@+id/headerClientNameText"
+       android:layout_width="0dp"
        android:layout_height="wrap_content"
-       android:textSize="20sp"
-       android:textColor="@android:color/white"
-       android:text="Conta Corrente: R$ 123,22"
        android:layout_marginStart="16dp"
-       android:layout_marginBottom="16dp"
-       app:layout_constraintBottom_toTopOf="@+id/headerAmountSavingsAccountText"
-       app:layout_constraintStart_toStartOf="@+id/imageView"/>
-
-   <TextView
-       android:id="@+id/headerAmountSavingsAccountText"
-       android:layout_width="wrap_content"
+       android:layout_marginEnd="16dp"
+       android:textColor="@android:color/white"
+       android:textSize="26sp"
+       android:textStyle="bold"
+       app:layout_constraintTop_toTopOf="@+id/headerClientImageVView"
+       app:layout_constraintBottom_toBottomOf="@+id/headerClientImageVView"
+       app:layout_constraintEnd_toStartOf="@+id/headerClientImageVView"
+       app:layout_constraintHorizontal_bias="0.0"
+       app:layout_constraintStart_toStartOf="parent" />
+   
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/headerAmountList"
+       android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:textSize="20sp"
-       android:textColor="@android:color/white"
-       android:text="Conta Poupança: R$ 123,22"
-       android:layout_marginStart="16dp"
+       android:orientation="horizontal"
+       tools:listitem="2"
+       android:layout_marginTop="16dp"
        android:layout_marginBottom="16dp"
-       app:layout_constraintBottom_toBottomOf="@+id/imageView"
-       app:layout_constraintStart_toStartOf="@+id/imageView"/>
+       android:layout_marginStart="4dp"
+       android:layout_marginEnd="8dp"
+       app:layoutManager="LinearLayoutManager"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+      />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

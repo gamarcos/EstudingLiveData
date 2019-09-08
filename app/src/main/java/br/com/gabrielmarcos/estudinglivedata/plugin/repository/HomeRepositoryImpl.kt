@@ -13,6 +13,7 @@ class HomeRepositoryImpl @Inject constructor(): BaseRepository(), HomeRepository
     override fun getClientData(): Client? {
         val call = getAPI().getClient()
         return executeCall(call)?.body()?.let { it }
+
     }
 
     override fun getAccountData(accountId: String?): Account? {
