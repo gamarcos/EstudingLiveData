@@ -7,6 +7,8 @@ import br.com.gabrielmarcos.estudinglivedata.plugin.dagger.module.FragmentModule
 import br.com.gabrielmarcos.estudinglivedata.plugin.dagger.module.RepositoryModule
 import br.com.gabrielmarcos.estudinglivedata.plugin.dagger.viewmodel.ViewModelModule
 import br.com.gabrielmarcos.estudinglivedata.plugin.main.BaseApplication
+import br.com.gabrielmarcos.estudinglivedata.plugin.repository.AbstractDAO
+import br.com.gabrielmarcos.estudinglivedata.plugin.repository.ContactsDAO
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -36,4 +38,6 @@ interface AppComponent {
     }
 
     fun injectApplication(app: BaseApplication)
+
+    fun contactsDAO(): ContactsDAO
 }

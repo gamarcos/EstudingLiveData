@@ -6,6 +6,24 @@
 
     <fragment android:id="@+id/homeFragment"
         android:name="br.com.gabrielmarcos.estudinglivedata.feature.home.view.HomeFragment"
-        android:label="HomeFragment"/>
+        android:label="HomeFragment">
+
+        <action
+            android:id="@+id/action_home_to_transaction"
+            app:destination="@id/transactionFragment" />
+
+    </fragment>
+
+    <fragment android:id="@+id/transactionFragment"
+        android:name="br.com.gabrielmarcos.estudinglivedata.feature.transaction.view.TransactionFragment"
+        android:label="TransactionFragment">
+
+        <argument
+            android:name="contact_to_transfer"
+            app:argType="br.com.gabrielmarcos.estudinglivedata.feature.models.Contact"
+            android:defaultValue="Contact('', '', '','', '')"
+            app:nullable="false"/>
+
+    </fragment>
 
 </navigation>

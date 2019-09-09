@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.LightNav" />
+
+    <style name="AppTheme.LightNav.White">
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
 </resources>
