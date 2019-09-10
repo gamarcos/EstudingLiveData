@@ -1,4 +1,4 @@
-package br.com.gabrielmarcos.estudinglivedata.plugin.repository
+package br.com.gabrielmarcos.estudinglivedata.plugin.repository.data
 
 import android.content.Context
 import android.content.SharedPreferences

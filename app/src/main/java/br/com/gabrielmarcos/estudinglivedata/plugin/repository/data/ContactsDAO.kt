@@ -1,4 +1,4 @@
-package br.com.gabrielmarcos.estudinglivedata.plugin.repository
+package br.com.gabrielmarcos.estudinglivedata.plugin.repository.data
 
 import android.annotation.SuppressLint
 import android.content.Context

@@ -7,13 +7,11 @@
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    android:windowSoftInputMode="adjustPan|adjustResize"
     app:layout_constraintTop_toBottomOf="@+id/homeSearchContacts">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#EEE">
+        android:layout_height="wrap_content">
 
         <!-- TODO Remover valores fixos -->
         <include
@@ -37,6 +35,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:text="Recentes"
+            android:visibility="gone"
             android:textColor="@android:color/primary_text_light"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -48,6 +47,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:visibility="gone"
             android:orientation="horizontal"
             app:layoutManager="LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"

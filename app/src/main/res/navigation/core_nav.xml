@@ -20,9 +20,9 @@
 
         <argument
             android:name="contact_to_transfer"
+            android:defaultValue="@null"
             app:argType="br.com.gabrielmarcos.estudinglivedata.feature.models.Contact"
-            android:defaultValue="Contact('', '', '','', '')"
-            app:nullable="false"/>
+            app:nullable="true"/>
 
     </fragment>
 

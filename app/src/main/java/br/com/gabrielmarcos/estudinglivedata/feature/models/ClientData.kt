@@ -17,4 +17,8 @@ data class ClientData(val client: Client? = null, val account: Account? = null) 
     fun getContacts() : List<Contact>? {
         return client?.contacts
     }
+
+    fun getClientPhoto() : String? {
+        return client?.image
+    }
 }

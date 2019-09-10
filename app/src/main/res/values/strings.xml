@@ -8,4 +8,6 @@
     </string>
     <string name="functionality_unavailable">Ah não! Ainda não implementamos essa funcionalidade</string>
     <string name="ok">OK</string>
+
+    <string name="currency_two_precision">R$ %.2f</string>
 </resources>

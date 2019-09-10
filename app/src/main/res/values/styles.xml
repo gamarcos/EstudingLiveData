@@ -1,17 +1,100 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="MaterialTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/bg_snow</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <item name="toolbarStyle">@style/AppToolbarStyle</item>
+        <item name="alertDialogTheme">@style/AlertDialogStyle</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.LightNav" />
+    <style name="MaterialTheme.LightNav" />
 
-    <style name="AppTheme.LightNav.White">
+    <style name="MaterialTheme.LightNav.White">
         <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/sul_sans_family</item>
+    </style>
+
+    <style name="TextAppearance.Header1">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily">@font/sul_sans_bold</item>
+    </style>
+
+    <style name="TextAppearance.Header1.Bigger">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="TextAppearance.Header1.Bigger.Orange">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@android:color/holo_orange_dark</item>
+        <item name="android:fontFamily">@font/sul_sans_medium</item>
+    </style>
+
+    <style name="Button.Outline.Orange" parent="Button.Filled.Orange">
+        <item name="backgroundTint">@android:color/white</item>
+        <item name="android:textColor">@android:color/holo_orange_dark</item>
+        <item name="textAllCaps">false</item>
+        <item name="strokeColor">@android:color/holo_orange_dark</item>
+        <item name="strokeWidth">2dp</item>
+    </style>
+
+    <style name="Button.Filled.Orange" parent="Widget.MaterialComponents.Button">
+        <item name="android:paddingTop">@dimen/padding_default</item>
+        <item name="android:paddingBottom">@dimen/padding_default</item>
+        <item name="android:textSize">@dimen/button_size</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">@font/sul_sans_medium</item>
+        <item name="backgroundTint">@android:color/white</item>
+        <item name="android:letterSpacing" tools:targetApi="lollipop">0</item>
+        <item name="rippleColor">?attr/colorControlHighlight</item>
+    </style>
+
+    <!--BottomSheet-->
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="colorAccent">@android:color/holo_orange_dark</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
+    </style>
+
+    <style name="AppToolbarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="titleTextAppearance">@style/TextAppearance.Toolbar</item>
+    </style>
+
+    <style name="TextAppearance.Toolbar">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/sul_sans_medium</item>
+    </style>
+
+    <!--AlertDialog-->
+    <style name="AlertDialogStyle" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:windowTitleStyle">@style/AlertDialogStyleTitle</item>
+        <item name="android:textAppearance">@style/TextAppearance.Header1</item>
+        <item name="android:textAppearanceMedium">@style/TextAppearance.Header1</item>
+        <item name="fontFamily">@font/sul_sans_family</item>
+    </style>
+
+    <style name="AlertDialogStyleTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/sul_sans_medium</item>
+        <item name="fontFamily">@font/sul_sans_medium</item>
     </style>
 
 </resources>

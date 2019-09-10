@@ -7,4 +7,14 @@
     <dimen name="placeholderTextHeight">8dp</dimen>
     <dimen name="padding_10">10dp</dimen>
 
+    <dimen name="button_size">16dp</dimen>
+
+    <dimen name="padding_default">16dp</dimen>
+
+    <dimen name="margin_default">16dp</dimen>
+
+    <dimen name="text_size_large">24sp</dimen>
+    <dimen name="text_size_medium">20sp</dimen>
+    <dimen name="text_size_small">18sp</dimen>
+
 </resources>

@@ -89,18 +89,17 @@ class HomeFragment: BaseFragment<HomeViewModel>(),
     }
 
     private fun setUpHomeView(clientData: ClientData?) {
-        clientData?.getContacts()?.get(0)?.let { viewModel.setRecentsContactsTransfer(it) }
+        // clientData?.getContacts()?.get(0)?.let { viewModel.setRecentsContactsTransfer(it) }
         setUpHeaderView(clientData)
         setUpRecyclerContacts(homeRecentList, viewModel.getRecentsContactsTransfer())
         setUpRecyclerContacts(homeContactsList, clientData?.getContacts())
-        setUpContacts()
         hideShimmer()
     }
 
     private fun setUpHeaderView(clientData: ClientData?) {
         headerClientNameText.text = clientData?.getClientName()
         setUpAmount(clientData)
-        loadImageIntoView(headerContent, headerClientImageVView, "https://scontent.fcgh28-1.fna.fbcdn.net/v/t1.0-9/51996574_2111850205566006_53001580059820032_n.jpg?_nc_cat=103&_nc_oc=AQkPBT6xQyijdltfBzuVdUKGfKwfLm0sMYYuguttHulL0JQ8n0wMVYaLs7e0JXIIB_w&_nc_ht=scontent.fcgh28-1.fna&oh=309f57cb126cfeae8060571a9cccaa69&oe=5E0DCEA9")
+        loadImageIntoView(headerContent, headerClientImageVView, clientData?.getClientPhoto()?:"")
     }
 
     //TODO jogar para a viewmodel
@@ -137,10 +136,6 @@ class HomeFragment: BaseFragment<HomeViewModel>(),
     override fun onClickListener(contact: Contact) {
         val args = TransactionFragmentArgs.Builder().setContactToTransfer(contact).build().toBundle()
         NavHostFragment.findNavController(this).navigate(R.id.action_home_to_transaction, args)
-    }
-
-    private fun setUpContacts() {
-
     }
 
     private fun hideShimmer() {

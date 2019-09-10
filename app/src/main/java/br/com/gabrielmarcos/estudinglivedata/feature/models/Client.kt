@@ -7,5 +7,6 @@ data class Client(
     val name: String?,
     val email: String?,
     val accountId: String?,
+    val image: String?,
     val contacts: List<Contact>?
 ): Serializable

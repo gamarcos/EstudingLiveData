@@ -22,7 +22,6 @@
             android:hint="Buscar Contato"
             android:maxLines="1"
             android:focusable="false"
-            android:focusableInTouchMode="false"
             android:imeOptions="actionDone"
             android:background="@android:color/transparent"
             app:layout_constraintBottom_toBottomOf="parent"

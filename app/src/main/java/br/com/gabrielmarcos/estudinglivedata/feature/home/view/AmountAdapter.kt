@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.adapter_amount.view.*
 
 class AmountAdapter(private val amounts: List<Pair<Int, String>>, private val context: Context) : RecyclerView.Adapter<AmountAdapter.ViewHolder>()  {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return AmountAdapter.ViewHolder(
+        return ViewHolder(
             LayoutInflater.from(context).inflate(
                 R.layout.adapter_amount,
                 parent,
